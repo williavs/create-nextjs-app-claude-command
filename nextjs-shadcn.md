@@ -90,7 +90,14 @@ Once the user provides their input, parse it to extract:
 ### Step 3: Execute Setup
 Run the setup script with the provided arguments:
 ```bash
-~/.claude/scripts/create-nextjs-shadcn.sh [project-name] [path] [theme]
+# Find script in same directory as this command file
+COMMAND_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [ -f "$COMMAND_DIR/create-nextjs-shadcn.sh" ]; then
+    "$COMMAND_DIR/create-nextjs-shadcn.sh" [project-name] [path] [theme]
+else
+    # Fallback to current directory
+    ./create-nextjs-shadcn.sh [project-name] [path] [theme]
+fi
 ```
 
 ### Step 4: Confirm Success

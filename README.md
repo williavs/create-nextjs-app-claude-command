@@ -6,18 +6,14 @@ Automates creation of Next.js 15 apps with TypeScript, Tailwind v4, all 47 shadc
 
 ### Option 1: Claude Code Command (Recommended)
 
-1. **Copy the command file:**
+1. **Copy both files to your Claude commands directory:**
    ```bash
    cp nextjs-shadcn.md ~/.claude/commands/
+   cp create-nextjs-shadcn.sh ~/.claude/commands/
+   chmod +x ~/.claude/commands/create-nextjs-shadcn.sh
    ```
 
-2. **Copy the script:**
-   ```bash
-   cp create-nextjs-shadcn.sh ~/.claude/scripts/
-   chmod +x ~/.claude/scripts/create-nextjs-shadcn.sh
-   ```
-
-3. **Use the command:**
+2. **Use the command:**
    ```bash
    /nextjs-shadcn
    ```
